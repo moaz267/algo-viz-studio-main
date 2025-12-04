@@ -44,7 +44,7 @@ const FooterSection = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
         >
-          <Link to="/github">
+          <Link to="https://github.com/moaz267/algo-viz-studio-main.git">
           <Button
             variant="outline"
             size="lg"
@@ -81,7 +81,8 @@ const FooterSection = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground"
         >
-          <p>© 2024 Algorithm Visualization. Built with passion.</p>
+          <p>© 2026 algorithm project </p>
+          <p>© all right reverse to Moaz elhenawy 2026 </p>
           <div className="flex items-center gap-6">
             <a href="#" className="hover:text-foreground transition-colors duration-300">Privacy</a>
             <a href="#" className="hover:text-foreground transition-colors duration-300">Terms</a>
