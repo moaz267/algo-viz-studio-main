@@ -2,6 +2,9 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Zap, Brain, Clock, Target, TrendingUp, Layers } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Play, Sparkles } from "lucide-react";
 
 interface AlgorithmData {
   title: string;
@@ -95,6 +98,12 @@ const ComparisonSection = () => {
           >
             <AlgorithmCard data={algorithmData.dynamic} />
           </motion.div>
+          <Link to="/explanation">
+            <Button variant="heroOutline" size="xl" className="group">
+              Learn Algorithms
+              <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+            </Button>
+          </Link>
         </div>
 
         {/* VS Badge
@@ -115,7 +124,9 @@ const ComparisonSection = () => {
             </div>
           </motion.div>
         </motion.div> */}
+        
       </div>
+      
     </section>
   );
 };
