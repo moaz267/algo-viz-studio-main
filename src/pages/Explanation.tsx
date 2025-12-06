@@ -128,67 +128,7 @@ const AnimatedDPTable = () => {
 
 // Decision Tree Visualization
 const DecisionTree = () => {
-  return (
-    <div className="bg-background/50 rounded-xl p-6 border border-border/50">
-      <h4 className="font-semibold mb-4">Decision Tree (0/1 Knapsack)</h4>
-      <div className="flex flex-col items-center">
-        {/* Root */}
-        <motion.div
-          initial={{ scale: 0 }}
-          whileInView={{ scale: 1 }}
-          viewport={{ once: true }}
-          className="px-4 py-2 bg-muted rounded-lg text-sm font-medium"
-        >
-          Start (W:0, V:$0)
-        </motion.div>
-        
-        {/* Level 1 */}
-        <div className="flex items-center gap-16 mt-2">
-          <div className="w-px h-6 bg-border" />
-          <div className="w-px h-6 bg-secondary" />
-        </div>
-        <div className="flex items-center gap-8">
-          <motion.div
-            initial={{ scale: 0 }}
-            whileInView={{ scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="flex flex-col items-center"
-          >
-            <span className="text-xs text-muted-foreground mb-1">Skip Item 1</span>
-            <div className="px-3 py-1 bg-muted/50 rounded text-xs">W:0, V:$0</div>
-          </motion.div>
-          <motion.div
-            initial={{ scale: 0 }}
-            whileInView={{ scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="flex flex-col items-center"
-          >
-            <span className="text-xs text-muted-foreground mb-1">Take Item 1</span>
-            <div className="px-3 py-1 bg-primary/20 rounded text-xs border border-primary/30">W:10, V:$60</div>
-          </motion.div>
-        </div>
-
-        {/* More levels indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.3 }}
-          className="mt-4 text-center"
-        >
-          <div className="text-muted-foreground text-sm">⋮</div>
-          <p className="text-xs text-muted-foreground mt-2">
-            Tree continues for each item (Take/Skip decision)
-          </p>
-          <div className="mt-3 px-4 py-2 bg-secondary/20 rounded-lg border border-secondary/30 inline-block">
-            <span className="text-xs text-secondary">Optimal Path: Skip 1 → Take 2 → Take 3 = $220</span>
-          </div>
-        </motion.div>
-      </div>
-    </div>
-  );
+  return null;
 };
 
 const Explanation = () => {
@@ -224,10 +164,10 @@ const Explanation = () => {
             className="text-center max-w-3xl mx-auto"
           >
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Understanding the <span className="gradient-text">Knapsack Problem</span>
+              Understanding the <span className="gradient-text">knapsack 0/1  Problem</span>
             </h1>
             <p className="text-lg text-muted-foreground">
-              Learn the difference between Greedy and Dynamic Programming through the classic Knapsack Problem
+              Learn the difference between Greedy and Dynamic Programming through the classic knapsack 0/1 Problem
             </p>
           </motion.div>
         </div>
@@ -246,7 +186,7 @@ const Explanation = () => {
               <div className="p-3 rounded-xl bg-primary/10">
                 <Scale className="w-8 h-8 text-primary" />
               </div>
-              <h2 className="text-2xl font-bold">What is the Knapsack Problem?</h2>
+              <h2 className="text-2xl font-bold">What is the knapsack 0/1 Problem?</h2>
             </div>
             <p className="text-muted-foreground leading-relaxed mb-6">
               Imagine you have a backpack with limited capacity and a set of items, each with a weight and value.
@@ -291,7 +231,7 @@ const Explanation = () => {
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Greedy algorithm makes the best decision at the current moment without looking ahead.
-                    For Knapsack, we calculate the value/weight ratio for each item and pick items 
+                    For knapsack 0/1, we calculate the value/weight ratio for each item and pick items 
                     with the highest ratio first.
                   </p>
                 </div>
@@ -346,7 +286,7 @@ const Explanation = () => {
                     <ul className="text-sm text-muted-foreground space-y-1">
                       <li>• Does NOT guarantee optimal solution</li>
                       <li>• May miss better combinations</li>
-                      <li>• Not suitable for 0/1 Knapsack</li>
+                      <li>• Not suitable for 0/1 knapsack 0/1</li>
                     </ul>
                   </div>
                 </div>
@@ -418,8 +358,7 @@ const Explanation = () => {
                 <AnimatedDPTable />
 
                 {/* Decision Tree */}
-                <DecisionTree />
-
+                
                 <div className="bg-background/50 rounded-xl p-4 border border-border/50">
                   <h3 className="text-sm font-semibold mb-2 flex items-center gap-2">
                     <Clock className="w-4 h-4 text-secondary" />
@@ -532,7 +471,7 @@ const Explanation = () => {
               </div>
 
               <div className="bg-background/50 rounded-xl p-4 border border-border/50 mb-6">
-                <p className="mb-2"><strong>Knapsack Capacity:</strong> 50 units</p>
+                <p className="mb-2"><strong>knapsack 0/1 Capacity:</strong> 50 units</p>
                 <p className="mb-4"><strong>Available Items:</strong></p>
                 <div className="grid grid-cols-3 gap-3 text-center text-sm">
                   <div className="bg-background/50 rounded p-3">
